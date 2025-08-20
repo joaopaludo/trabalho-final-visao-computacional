@@ -1,7 +1,14 @@
-# trabalho-final-visao-computacional
-Trabalho final da disciplina de Visão Computacional da 8ª fase do curso de Ciência da Computação.
+# 💵 Contador Automático de Dinheiro com Visão Computacional
+Este projeto foi desenvolvido como trabalho final da disciplina de visão computacional.
+Nosso objetivo é implementar um sistema capaz de detectar e identificar cédulas e moedas brasileiras a partir de imagens ou vídeos, e realizar automaticamente o somatório do valor total reconhecido.
 
-### Autores:
+## ⚙️ Tecnologias Utilizadas
+TO-DO
+
+## 📖 Como Funciona
+TO-DO
+
+## Autores:
 * [Alysson Antonietti](https://www.github.com/AlyssonAntonietti)
 * [Gabriel Perico](https://github.com/GabrielPerico)
 * [João Paulo Gregolon Paludo](https://github.com/joaopaludo)

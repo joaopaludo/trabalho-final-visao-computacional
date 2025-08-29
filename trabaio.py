@@ -12,9 +12,9 @@ from PIL import Image
 
 # --- CONFIGURAÇÕES ---
 data_dir = "./moedas/moedas_treino"  # caminho para o dataset baixado do Kaggle
-model_path = "modelo.pth"
+model_path = "modelos/modelo_50_epochs.pth"
 batch_size = 16
-epochs = 5
+epochs = 50
 lr = 0.001
 
 # Mapeamento das classes para valores monetários

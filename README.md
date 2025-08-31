@@ -8,6 +8,7 @@ O projeto foi construído em Python 3.10, utilizando as seguintes bibliotecas pr
 - TensorFlow/Keras: Utilizada para carregar nosso modelo de Inteligência Artificial (.h5) e executar a classificação de cada moeda identificada.
 - NumPy: Usada para a manipulação eficiente das imagens como matrizes numéricas, sendo fundamental para a preparação dos dados antes de enviá-los ao modelo.
 - [Google Teachable Machine](https://teachablemachine.withgoogle.com/): Plataforma online que usamos para treinar, de forma rápida e visual, o modelo de classificação de imagens.
+- venv: Ferramenta para criar um ambiente virtual isolado, garantindo que as dependências do projeto sejam gerenciadas de forma limpa e sem conflitos.
 
 ## 📖 Como Funciona
 TO-DO

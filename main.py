@@ -9,13 +9,13 @@ from tensorflow.keras.models import load_model
 # IMAGE_PATH = "moedas/5 centavos/nova/5-centavos-nova (8).JPG"
 # IMAGE_PATH = "moedas/10 centavos/nova/10-centavos-nova (2).JPG"
 # IMAGE_PATH = "moedas/50 centavos/50-centavos (3).JPG"
-# IMAGE_PATH = "moedas/teste1.jpg"
+IMAGE_PATH = "moedas/teste1.jpg"
 # IMAGE_PATH = "moedas/teste2.jpg"
 # IMAGE_PATH = "moedas/teste3.jpg"
 
 MODEL_PATH = 'modelos/keras_model.h5'
 CLASSES = ["1_Real", "50_centavos", "25_centavos", "10_centavos", "5_centavos"]
-CONFIDENCE_THRESHOLD = 0.3  # 70%
+CONFIDENCE_THRESHOLD = 0.3  # 30%
 MINIMUM_COIN_AREA = 2000
 # --------------------
 
@@ -74,8 +74,8 @@ else:
                 if classe == '10_centavos': valorTotal += 0.10
                 if classe == '5_centavos': valorTotal += 0.05
 
-    cv2.rectangle(imagemSaida, (400, 20), (620, 80), (0, 0, 255), -1)
-    cv2.putText(imagemSaida, f'R$ {valorTotal:.2f}', (410, 65), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (255, 255, 255), 2)
+    cv2.rectangle(imagemSaida, (200, 20), (20, 80), (0, 0, 255), -1)
+    cv2.putText(imagemSaida, f'R$ {valorTotal:.2f}', (40, 65), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (255, 255, 255), 2)
 
     cv2.imshow('Resultado final', imagemSaida)
     cv2.imshow('Pre-processamento', imgPreprocessada)

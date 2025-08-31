@@ -27,13 +27,13 @@ O projeto opera em um pipeline de Visão Computacional e Machine Learning que po
 python -m venv venv
 source venv/bin/activate
 ```
-3. Instale as dependências:
-```
-pip install -r requirements.txt
-```
-4. Ative o ambiente virtual:
+3. Ative o ambiente virtual:
 ```
 venv/Scripts/activate
+```
+4. Instale as dependências:
+```
+pip install -r requirements.txt
 ```
 5. Execute o script principal:
 ```

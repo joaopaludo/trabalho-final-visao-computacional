@@ -3,10 +3,19 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 # --- CONFIGURAÇÕES ---
-IMAGE_PATH = "moedas/25 centavos/Nova/25-centavos-nova (3).JPG"
+
+# IMAGE_PATH = "moedas/25 centavos/Nova/25-centavos-nova (2).JPG"
+# IMAGE_PATH = "moedas/1 real/100-centavos (3).JPG"
+# IMAGE_PATH = "moedas/5 centavos/nova/5-centavos-nova (8).JPG"
+# IMAGE_PATH = "moedas/10 centavos/nova/10-centavos-nova (2).JPG"
+# IMAGE_PATH = "moedas/50 centavos/50-centavos (3).JPG"
+# IMAGE_PATH = "moedas/teste1.jpg"
+# IMAGE_PATH = "moedas/teste2.jpg"
+# IMAGE_PATH = "moedas/teste3.jpg"
+
 MODEL_PATH = 'modelos/keras_model.h5'
 CLASSES = ["1_Real", "50_centavos", "25_centavos", "10_centavos", "5_centavos"]
-CONFIDENCE_THRESHOLD = 0.7  # 70%
+CONFIDENCE_THRESHOLD = 0.3  # 70%
 MINIMUM_COIN_AREA = 2000
 # --------------------
 
@@ -17,7 +26,7 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 def preProcessar(img):
     imgPreprocessed = cv2.GaussianBlur(img, (5, 5), 3)
     imgPreprocessed = cv2.Canny(imgPreprocessed, 90, 140)
-    kernel = np.ones((4, 4), np.uint8)
+    kernel = np.ones((2, 2), np.uint8)
     imgPreprocessed = cv2.dilate(imgPreprocessed, kernel, iterations=2)
     imgPreprocessed = cv2.erode(imgPreprocessed, kernel, iterations=1)
     return imgPreprocessed
@@ -58,7 +67,7 @@ else:
             classe, confiabilidade = detectarMoeda(recorte)
 
             if confiabilidade > CONFIDENCE_THRESHOLD:
-                cv2.putText(imagemSaida, str(classe), (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+                cv2.putText(imagemSaida, str(classe) + " " + f'{confiabilidade:.2f}', (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0), 1)
                 if classe == '1_Real': valorTotal += 1.0
                 if classe == '50_centavos': valorTotal += 0.50
                 if classe == '25_centavos': valorTotal += 0.25

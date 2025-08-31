@@ -4,7 +4,7 @@ from tensorflow.keras.models import load_model
 
 # --- CONFIGURAÇÕES ---
 # 1. Defina o caminho para a imagem que você quer analisar
-IMAGE_PATH = "moedas/colecao/IMG_9844.JPG"
+IMAGE_PATH = "moedas/25 centavos/Nova/25-centavos-nova (3).JPG"
 
 # 2. Defina os caminhos para o modelo e os nomes das classes
 MODEL_PATH = 'modelos/keras_model.h5'
